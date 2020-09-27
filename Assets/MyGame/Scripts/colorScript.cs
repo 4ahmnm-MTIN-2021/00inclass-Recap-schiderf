@@ -4,22 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class nextButton2 : MonoBehaviour
+public class colorScript : MonoBehaviour
 {
     public Button btn;
     public Image img;
+    public Color orangeyellow;
     // Start is called before the first frame update
     void Start()
     {
-
+        orangeyellow = new Color(1.0f, 205 / 255f, 25 / 255f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
-            
+            img.GetComponent<Image>().color = orangeyellow;
         }
     }
 
