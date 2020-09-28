@@ -1,6 +1,6 @@
 # 00inclass-Recap-schiderf  
 ### Project description: 
-
+Simple Programm with three scenes, a random color changer and a calculator
 
 ### Development platform: 
 
