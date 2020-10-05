@@ -8,11 +8,21 @@ public class colorScript : MonoBehaviour
 {
     public Button btn;
     public Image img;
-    public Color orangeyellow;
+    private Color orangeGelb, kastanienBraun, sonnenuntergang, violettGrau;
+    private Color[] colors;
+    private System.Random rnd = new System.Random();
     // Start is called before the first frame update
     void Start()
     {
-        orangeyellow = new Color(1.0f, 205 / 255f, 25 / 255f);
+        void Start()
+        {
+            orangeGelb = new Color(1.0f, 205 / 255f, 25 / 255f);
+            kastanienBraun = new Color(95 / 255f, 34 / 255f, 0.0f);
+            sonnenuntergang = new Color(207 / 255f, 63 / 255f, 21 / 255f);
+            violettGrau = new Color(102 / 255f, 47 / 255f, 84 / 255f);
+            colors = new Color[] { Color.red, orangeGelb, kastanienBraun, sonnenuntergang, violettGrau };
+            colorImage.GetComponent<Image>().color = colors[0];
+        }
     }
 
     // Update is called once per frame
@@ -20,7 +30,8 @@ public class colorScript : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            img.GetComponent<Image>().color = orangeyellow;
+
+            img.GetComponent<Image>().color = colors[rnd.Next(colors.Length)];
         }
     }
 

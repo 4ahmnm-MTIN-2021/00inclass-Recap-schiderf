@@ -12,23 +12,10 @@ public class calcScript : MonoBehaviour
     public Text solution;
     public Button calc;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
     }
-
-
 
 
     private int addNumbers()
